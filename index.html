@@ -1,22 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineView</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header>
         <h1>CineView</h1>
         <nav>
             <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Filmes</a></li>
-                <li><a href="#">Séries</a></li>
-                <li><a href="#">Animes</a></li>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#filmes">Filmes</a></li>
+                <li><a href="#series">Séries</a></li>
+                <li><a href="#animes">Animes</a></li>
             </ul>
         </nav>
     </header>
+
+    <section id="filmes">
+        <h2>Filmes</h2>
+        <div class="carrossel-container" data-carrossel="1">
+            <button class="prev" onclick="moverCarrossel(-1, 1)">&#10094;</button>
+            <div class="carrossel-wrapper">
+                <div class="carrossel">
+                    <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4745D63EC0BCFAE6D8E77E763E15C2228E100BB5E433FDAD64A9A4C528068181/scale?width=1200&aspectRatio=1.78&format=webp"
+                        alt="Elementos, disney" class="imagem">
+                </div>
+            </div>
+            <button class="next" onclick="moverCarrossel(1, 1)">&#10095;</button>
+        </div>
+    </section>
+
+
+    <section id="series" class="background">
+        <h2>Séries</h2>
+        <div class="carrossel-container" data-carrossel="2">
+            <button class="dir" onclick="moverCarrossel(-1, 2)">&#10094;</button>
+            <div class="carrossel-wrapper">
+                <div class="carrossel">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiR3M2UQt4P8mTuYWjzP-_5jKtO4EcePKoOA&s"
+                        alt="Dark" class="imagem">
+                </div>
+                <button class="esq" onclick="moverCarrossel(1, 2)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="animes">
+        <h2>Animes</h2>
+        <div class="carrossel-container" data-carrossel="3">
+            <button class="cim" onclick="moverCarrossel(-1, 3)">&#10094;</button>
+            <div class="carrossel-wrapper">
+                <div class="carrossel">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQa6u4GRxNMgqDrehCLbGieRnt79Gdx7eOXA&s"
+                        alt="Elementos, disney" class="imagem">
+                </div>
+                <button class="bai" onclick="moverCarrossel(1, 3)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
