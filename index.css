@@ -107,7 +107,8 @@ body {
 section {
     border-bottom: 5px solid #ff6347;
     background-color: #464545;
-    height: 310px;
+    height: 300px;
+    min-height: 220px;
 }
 
 section h2 {
@@ -123,7 +124,7 @@ section div img {
 
 @media (max-width: 600px) {
     section {
-        height: 220px;
+        height: 235px;
     }
 
     section h2 {
@@ -149,10 +150,11 @@ section div img {
     }
 }
 
-.carroecel-container {
-    overflow: hidden;
+.carrossel-container {
     position: relative;
-    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .carrossel {
@@ -166,34 +168,12 @@ section div img {
     overflow: hidden;
 }
 
-.carrossel-container .prev {
+.prev, .dir, .cim {
     left: 10px;
-    top: 40%;
 }
 
-.carrossel-container .next {
+.next, .esq, .bai {
     right: 10px;
-    top: 40%;
-}
-
-.carrossel-container .dir {
-    left: 10px;
-    top: 85%;
-}
-
-.carrossel-container .esq {
-    right: 10px;
-    top: 85%;
-}
-
-.carrossel-container .cim {
-    left: 10px;
-    top: 130%;
-}
-
-.carrossel-container .bai {
-    right: 10px;
-    top: 130%;
 }
 
 @media (max-width: 600px) {
@@ -201,34 +181,12 @@ section div img {
         max-width: 100%;
     }
 
-    .carrossel-container .prev {
+    .prev, .dir, .cim {
         left: 10px;
-        top: 34%;
     }
-
-    .carrossel-container .next {
+    
+    .next, .esq, .bai {
         right: 10px;
-        top: 34%;
-    }
-
-    .carrossel-container .dir {
-        left: 10px;
-        top: 65%;
-    }
-
-    .carrossel-container .esq {
-        right: 10px;
-        top: 65%;
-    }
-
-    .carrossel-container .cim {
-        left: 10px;
-        top: 91%;
-    }
-
-    .carrossel-container .bai {
-        right: 10px;
-        top: 91%;
     }
 }
 
@@ -237,34 +195,12 @@ section div img {
         max-width: 100%;
     }
 
-    .carrossel-container .prev {
+    .prev, .dir, .cim {
         left: 10px;
-        top: 35%;
     }
-
-    .carrossel-container .next {
+    
+    .next, .esq, .bai {
         right: 10px;
-        top: 35%;
-    }
-
-    .carrossel-container .dir {
-        left: 10px;
-        top: 72%;
-    }
-
-    .carrossel-container .esq {
-        right: 10px;
-        top: 72%;
-    }
-
-    .carrossel-container .cim {
-        left: 10px;
-        top: 110%;
-    }
-
-    .carrossel-container .bai {
-        right: 10px;
-        top: 110%;
     }
 }
 
@@ -274,7 +210,7 @@ section div img {
 }
 
 .imagem {
-    width: 22%;
+    width: 20%;
     object-fit: cover;
     flex-shrink: 0;
     margin-left: 5px;
@@ -282,7 +218,7 @@ section div img {
     max-width: 30%;
     min-width: 300px;
     height: auto;
-    margin-top: 12px;
+    top: 50%;
 }
 
 @media (max-width: 600px) {
@@ -315,6 +251,7 @@ button {
     cursor: pointer;
     z-index: 2;
     border-radius: 20%;
+    top: 50%;
 }
 
 button:hover {
@@ -325,6 +262,7 @@ button:hover {
     button {
         padding: 5px;
         font-size: 25px;
+        top: 60%;
     }
 }
 
@@ -332,5 +270,6 @@ button:hover {
     button {
         padding: 6px;
         font-size: 30px;
+        top: 55%;
     }
 }
