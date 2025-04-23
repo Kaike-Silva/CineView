@@ -41,3 +41,50 @@ window.addEventListener('resize', () => {
         carrossel.style.width = `${imagens.length * larguraImagem}px`;
     });
 });
+
+document.querySelectorAll('.imagem').forEach(img => {
+    img.addEventListener('click', function() {
+      const modal = document.getElementById('imageModal');
+      const modalImg = document.getElementById('modalImage');
+      const modalInfo = document.getElementById('modalInfo');
+      
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      modalImg.alt = this.alt; // Preserva o texto alternativo
+      
+      // Desabilita o scroll da página quando o modal está aberto
+      document.body.style.overflow = 'hidden';
+      
+      const title = this.getAttribute('data-title') || 'Título não disponível';
+      const description = this.getAttribute('data-desc') || 'Descrição não disponível';
+      const details = this.getAttribute('data-details') || '';
+      
+      modalInfo.innerHTML = `
+        <h2>${title}</h2>
+        <p>${description}</p>
+        ${details ? `<div class="additional-details">${details}</div>` : ''}
+      `;
+    });
+  });
+  
+  // Fechar o modal
+  document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('imageModal').style.display = "none";
+    document.body.style.overflow = 'auto'; // Restaura o scroll
+  });
+  
+  // Fechar ao clicar fora do conteúdo
+  window.addEventListener('click', function(event) {
+    if (event.target == document.getElementById('imageModal')) {
+      document.getElementById('imageModal').style.display = "none";
+      document.body.style.overflow = 'auto';
+    }
+  });
+  
+  // Fechar com tecla ESC
+  document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+      document.getElementById('imageModal').style.display = "none";
+      document.body.style.overflow = 'auto';
+    }
+  });
