@@ -32,16 +32,17 @@
     <section id="filmes">
         <h2>Filmes</h2>
         <div class="carrossel-container" data-carrossel="1">
-            <button class="prev" onclick="moverCarrossel(-1, 1)">&#10094;</button>
+            <button class="prev carrossel-btn" onclick="moverCarrossel(-1, 1)">&#10094;</button>
             <div class="carrossel-wrapper">
                 <div class="carrossel">
                     <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4745D63EC0BCFAE6D8E77E763E15C2228E100BB5E433FDAD64A9A4C528068181/scale?width=1200&aspectRatio=1.78&format=webp"
                         alt="Elementos, disney" class="imagem" data-title="Elementos"
-                        data-desc="">
+                        data-desc="Filme divertido até certo ponto, porém mais genérico impossível. É sempre a mesma história de uma casal que não combina, a familia não concorda e no final eles ficam juntos. Gostei da ambientação, os detalhes são interessantes e é uma animação bonitinha, mas nada de mais.
+                        Nota 6/10">.
 
                 </div>
             </div>
-            <button class="next" onclick="moverCarrossel(1, 1)">&#10095;</button>
+            <button class="next carrossel-btn" onclick="moverCarrossel(1, 1)">&#10095;</button>
         </div>
     </section>
 
@@ -49,14 +50,14 @@
     <section id="series" class="background">
         <h2>Séries</h2>
         <div class="carrossel-container" data-carrossel="2">
-            <button class="dir" onclick="moverCarrossel(-1, 2)">&#10094;</button>
+            <button class="dir carrossel-btn" onclick="moverCarrossel(-1, 2)">&#10094;</button>
             <div class="carrossel-wrapper">
                 <div class="carrossel">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiR3M2UQt4P8mTuYWjzP-_5jKtO4EcePKoOA&s"
                         alt="Dark" class="imagem" data-title="Dark"
-                        data-desc="">
+                        data-desc="A trama foi muito envolvente para mim até certo ponto, a cada episódio eu queria assistir o próximo para saber o que iria acontecer, até me cansar um pouco. A história gira basicamente em torno das mesmas familias a série inteira, algo que me incomodou um pouco. Além disso, infelizmente a série deixou muitas 'pontas soltas' como acontecimentos que não fazem muito sentido, personagens aparecendo em lugares de maneira conveniênte, outros que não tiveram sua história aprofundada e etc. Imagino a dificuldade de tentar trabalhar com a linha do tempo dessa forma e fazer tudo de maneira perfeita, mas acredito que poderia ser um pouco melhor. No final eu gostei bastante de qualquer forma. Nota 8/10">
                 </div>
-                <button class="esq" onclick="moverCarrossel(1, 2)">&#10095;</button>
+                <button class="esq carrossel-btn" onclick="moverCarrossel(1, 2)">&#10095;</button>
             </div>
         </div>
     </section>
@@ -64,19 +65,36 @@
     <section id="animes">
         <h2>Animes</h2>
         <div class="carrossel-container" data-carrossel="3">
-            <button class="cim" onclick="moverCarrossel(-1, 3)">&#10094;</button>
+            <button class="cim carrossel-btn" onclick="moverCarrossel(-1, 3)">&#10094;</button>
             <div class="carrossel-wrapper">
                 <div class="carrossel">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQa6u4GRxNMgqDrehCLbGieRnt79Gdx7eOXA&s"
                         alt="Shangri-la-frontier" class="imagem" data-title="Shangri-la-frontier"
-                        data-desc="">
+                        data-desc="Só mais um anime sobre o protagonista que fica viciado em um jogo. Mas não é ruim, ele tentar se diversificar adicionando outros jogos, não ficando preso somente no principal, não é uma completa perca de tempo, também não é nada de muito especial, mas não me arrependo. A animação não é das melhores, o que é compreensivel, e foi bem divertivo. Nota 6,5/10">
                 </div>
-                <button class="bai" onclick="moverCarrossel(1, 3)">&#10095;</button>
+                <button class="bai carrossel-btn" onclick="moverCarrossel(1, 3)">&#10095;</button>
             </div>
         </div>
     </section>
 
     <script src="script.js"></script>
+
+    <footer>
+    <h3>Deixe sua sugestão</h3>
+    <form action="https://webhook.site/8179c0a9-30ae-4213-8a2c-4cd0b1c02476" method="POST" id="form-sugestao">
+        <label for="nome">Nome completo</label>
+        <input type="text" name="nome" placeholder="Seu nome" required />
+        
+        <label for="email">E-mail</label>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+
+        <label for="sugestão">Sua sugestão</label>
+        <textarea name="mensagem" placeholder="Digite sua sugestão ou feedback" required></textarea>
+        
+        <button type="submit">Enviar</button>
+    </form>
+</footer>
+
 </body>
 
 </html>
