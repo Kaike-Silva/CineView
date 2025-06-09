@@ -36,8 +36,7 @@
             <div class="carrossel-wrapper">
                 <div class="carrossel">
                     <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4745D63EC0BCFAE6D8E77E763E15C2228E100BB5E433FDAD64A9A4C528068181/scale?width=1200&aspectRatio=1.78&format=webp"
-                        alt="Elementos, disney" class="imagem" data-title="Elementos"
-                        data-desc="Filme divertido até certo ponto, porém mais genérico impossível. É sempre a mesma história de uma casal que não combina, a familia não concorda e no final eles ficam juntos. Gostei da ambientação, os detalhes são interessantes e é uma animação bonitinha, mas nada de mais.
+                        alt="Elementos, disney" class="imagem" data-title="Elementos" data-desc="Filme divertido até certo ponto, porém mais genérico impossível. É sempre a mesma história de uma casal que não combina, a familia não concorda e no final eles ficam juntos. Gostei da ambientação, os detalhes são interessantes e é uma animação bonitinha, mas nada de mais.
                         Nota 6/10">.
 
                 </div>
@@ -71,29 +70,43 @@
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQa6u4GRxNMgqDrehCLbGieRnt79Gdx7eOXA&s"
                         alt="Shangri-la-frontier" class="imagem" data-title="Shangri-la-frontier"
                         data-desc="Só mais um anime sobre o protagonista que fica viciado em um jogo. Mas não é ruim, ele tentar se diversificar adicionando outros jogos, não ficando preso somente no principal, não é uma completa perca de tempo, também não é nada de muito especial, mas não me arrependo. A animação não é das melhores, o que é compreensivel, e foi bem divertivo. Nota 6,5/10">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjTvu-X76r6_kZ5dfP-8hBEqfsE_6MNrXqCg&s"
+                        alt="One Piece" class="imagem" data-title="One Piece" data-desc="Concordo com a opinião da maioria que diz que esse anime demora muito tempo para você começar a gostar dele, cerca de 300 episódios mais ou menos, mas depois dessa parte tudo começa a te surpreender de um jeito muito legal. Recomendo fortemente para quem tem muito tempo sobrando ou gasta seu tempo de sobra assistindo animes, é realmente maravilhoso. Claro que os filers e enrolação prejudicam muito a experiência, mas no final vale a pena. Nota 8.75/10">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj_MmBDAr1CqCsAO0XvV1OJ_JAoFpIySg32A&s"
+                        alt="Hunter X Hunter" class="imagem" data-title="Hunter X Hunter" data-desc="Um dos melhores animes que já assisti, sem dúvidas. Todos os arcos, a maneira como a história é contada, os personagens cativantes e apegaveis, acho tudo muito acima da média. Seu sistema de poder é unico e complexo, não tenho muito do que reclamar, somente da falta de continuação por conta do infeliz estado de saúde de seu criador. Enfim, um dos poucos animes que eu recomendo para qualquer um que aparecer na minha frente e esteja procurando algo para assistir. Nota 9.5/10">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS646Ewma_Da74T4lSwJqcAvoIgehcN-wXZIg&s"
+                        alt="One Punch Man" class="imagem" data-title="One Punch Man" data-desc="Para o meu gosto pessoal, o melhor anime que já assisti, não é daqueles que eu recomendaria para qualquer um pois é um pouco expecifico, mas para mim é perfeito, a maneira como o protagonista está cagando para tudo, a forma que ele resolve as coisas, suas preocupações e a maneira como ele aproxima pessoas sem querer, tudo muito bom. Mesmo se tratando de um anime voltado para o humor, suas partes sérias deixam ele ainda melhor, principalmente no manga, toda a beleza e riqueza dos detalhes, é tudo muito lindo. Dificilmente algum outro anime irá superar esse, pelo menos para mim, estou ansioso pela próxima temporada, mesmo a animação não sendo a mais bonita. Nota 10/10">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpkqXN3jUa2XGh9C7LN5IGqL10Vmww-rvvGQ&s"
+                        alt="Re:Zero" class="imagem" data-title="Re:Zero" data-desc="Não costumo assitir animes de drama, dei uma chance para esse e acertei. Anime ótimo, história interessante demais, a forma como tudo acontece também é muito legal. A dor do protagonista é visivel na maior parte do tempo, mesmo irritando um pouco as vezes, não deixa de ser interessante. Nota 7.5/10">
                 </div>
                 <button class="bai carrossel-btn" onclick="moverCarrossel(1, 3)">&#10095;</button>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
-
     <footer>
-    <h3>Deixe sua sugestão</h3>
-    <form action="https://webhook.site/8179c0a9-30ae-4213-8a2c-4cd0b1c02476" method="POST" id="form-sugestao">
-        <label for="nome">Nome completo</label>
-        <input type="text" name="nome" placeholder="Seu nome" required />
-        
-        <label for="email">E-mail</label>
-        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <h3>Deixe sua sugestão</h3>
+        <form action="https://webhook.site/8179c0a9-30ae-4213-8a2c-4cd0b1c02476" method="POST" id="form-sugestao">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required />
+            <span id="erroNome" style="color: red;"></span>
 
-        <label for="sugestão">Sua sugestão</label>
-        <textarea name="mensagem" placeholder="Digite sua sugestão ou feedback" required></textarea>
-        
-        <button type="submit">Enviar</button>
-    </form>
-</footer>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+            <span id="erroEmail" style="color: red;"></span>
+
+            <label for="sugestão">Sua sugestão</label>
+            <textarea name="mensagem" placeholder="Digite sua sugestão ou feedback" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
